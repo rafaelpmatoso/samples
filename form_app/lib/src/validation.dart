@@ -4,6 +4,7 @@
 
 import 'package:english_words/english_words.dart' as english_words;
 import 'package:flutter/material.dart';
+import 'package:form_app/src/keys/form_keys.dart';
 
 class FormValidationDemo extends StatefulWidget {
   const FormValidationDemo({super.key});
@@ -65,6 +66,7 @@ class _FormValidationDemoState extends State<FormValidationDemo> {
               children: [
                 // A text field that validates that the text is an adjective.
                 TextFormField(
+                  key: FormKeys.adjectiveInputKey,
                   autofocus: true,
                   textInputAction: TextInputAction.next,
                   validator: (value) {
@@ -90,6 +92,7 @@ class _FormValidationDemoState extends State<FormValidationDemo> {
                 ),
                 // A text field that validates that the text is a noun.
                 TextFormField(
+                  key: FormKeys.nounInputKey,
                   validator: (value) {
                     if (value!.isEmpty) {
                       return 'Please enter a noun.';

@@ -5,6 +5,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:form_app/src/keys/sign_in_http_keys.dart';
 import 'package:http/http.dart' as http;
 import 'package:json_annotation/json_annotation.dart';
 
@@ -55,6 +56,7 @@ class _SignInHttpDemoState extends State<SignInHttpDemo> {
               children: [
                 ...[
                   TextFormField(
+                    key: SignInHttpKeys.emailInputKey,
                     autofocus: true,
                     textInputAction: TextInputAction.next,
                     decoration: const InputDecoration(
@@ -67,6 +69,7 @@ class _SignInHttpDemoState extends State<SignInHttpDemo> {
                     },
                   ),
                   TextFormField(
+                    key: SignInHttpKeys.passwordInputKey,
                     decoration: const InputDecoration(
                       filled: true,
                       labelText: 'Password',
